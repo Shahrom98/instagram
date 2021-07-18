@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <RelativeLayout
+       android:id="@+id/logo_glav"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       android:layout_marginBottom="4dp"
+       tools:ignore="MissingConstraints">
+
+      <TextView
+          android:id="@+id/logo_inst"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="10dp"
+          android:fontFamily="cursive"
+          android:text="@string/Logoinst"
+          android:textSize="35sp"
+          android:textStyle="bold" />
+
+      <ImageView
+          android:id="@+id/img_mes"
+          android:layout_width="35dp"
+          android:layout_height="30dp"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:src="@drawable/ic_baseline_message_24"
+
+          />
+
+      <ImageView
+          android:id="@+id/img_add"
+          android:layout_width="35dp"
+          android:layout_height="30dp"
+          android:layout_centerVertical="true"
+          android:layout_toLeftOf="@id/img_mes"
+          android:src="@drawable/ic_baseline_add_24"
+          tools:ignore="NotSibling" />
+
+   </RelativeLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recycle"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/logo_glav"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/logo_glav"
+       tools:ignore="MissingConstraints">
+
+   </androidx.recyclerview.widget.RecyclerView>
+
+   <RelativeLayout
+       android:id="@+id/logo_nav"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/recycle"
+       android:background="@color/white"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent">
+
+      <ImageView
+          android:id="@+id/img_home"
+          android:layout_width="35dp"
+          android:outlineAmbientShadowColor="@color/black"
+          android:layout_height="30dp"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:src="@drawable/ic_baseline_home_24"
+          />
+
+      <ImageView
+          android:id="@+id/img_search"
+          android:layout_width="30dp"
+          android:layout_height="35dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginRight="25dp"
+          android:layout_centerVertical="true"
+          android:outlineAmbientShadowColor="@color/black"
+          android:layout_toRightOf="@+id/img_home"
+          android:src="@drawable/ic_baseline_search_24"
+          tools:ignore="NotSibling"
+          />
+      <ImageView
+          android:id="@+id/video"
+          android:layout_width="35dp"
+          android:layout_height="30dp"
+          android:outlineAmbientShadowColor="@color/black"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="30dp"
+          android:layout_marginRight="15dp"
+          android:layout_toRightOf="@+id/img_search"
+          android:src="@drawable/ic_baseline_videocam_24"
+          />
+      <ImageView
+       android:id="@+id/favorite"
+       android:layout_width="25dp"
+       android:layout_height="30dp"
+       android:layout_toRightOf="@+id/video"
+       android:layout_centerVertical="true"
+       android:layout_marginLeft="30dp"
+          android:outlineAmbientShadowColor="@color/black"
+       android:layout_marginRight="25dp"
+       android:src="@drawable/ic_baseline_favorite_border_24"
+       />
+
+      <ImageView
+          android:id="@+id/img_pers"
+          android:layout_width="25dp"
+          android:layout_height="30dp"
+          android:layout_alignParentRight="true"
+          android:layout_toRightOf="@+id/favorite"
+          android:outlineAmbientShadowColor="@color/black"
+          android:src="@drawable/ic_baseline_account_circle_24" />
+
+   </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
